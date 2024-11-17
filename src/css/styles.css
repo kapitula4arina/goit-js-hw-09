@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
 h1,
 h2,
 h3,
@@ -8,9 +16,6 @@ p {
   margin: 0;
 }
 
-p:last-child {
-  margin-bottom: 0;
-}
 
 ul {
   margin: 0;
@@ -31,4 +36,155 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.nav-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+
+  transition: color 400ms;
+}
+
+.nav-link:hover {
+  color: #4e75ff;
+}
+
+.gallery {
+  padding-top: 24px;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  max-width: 1128px;
+}
+
+.gallery-item {
+  flex-basis: calc((100% - 48px) / 3);
+  position: relative;
+}
+
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  object-fit: cover;
+
+  transition: transform 250ms;
+}
+
+.gallery-image:hover {
+  transform: scale(1.04);
+}
+
+.sl-overlay {
+  background: rgba(46, 47, 66, 0.8) !important;
+}
+
+.sl-wrapper .sl-navigation button.sl-next,
+.sl-wrapper .sl-navigation button.sl-prev {
+  color: #FFFFFF;
+}
+
+.sl-wrapper button.sl-close {
+  color: #FFFFFF;
+}
+
+.simple-lightbox div.sl-counter {
+  color: #FFFFFF;
+}
+
+
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 8px;
+  padding: 24px;
+  width: 408px;
+  min-height: 296px;
+
+  background: #fff;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.feedback-form input {
+  margin-top: 8px;
+
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  min-height: 40px;
+}
+
+.feedback-form textarea {
+  margin-top: 8px;
+  resize: none;
+
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  min-height: 40px;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  border: 1.5px solid #000;
+  border-radius: 4px;
+}
+
+.feedback-form input:active,
+.feedback-form textarea:active {
+  border: 1px solid #808080;
+  border-radius: 4px;
+}
+
+.feedback-form button {
+  margin-top: 16px;
+
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 95px;
+  min-height: 40px;
+  border: none;
+  background-color: #4e75ff;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+
+  transition: background-color 400ms;
+}
+
+.feedback-form button:hover {
+  background-color: #6c8cff;
 }

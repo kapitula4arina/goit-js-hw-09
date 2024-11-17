@@ -37,6 +37,13 @@ export default defineConfig(({ command }) => {
       outDir: '../dist',
       emptyOutDir: true,
     },
+    optimizeDeps: {
+      include: [
+        'vite-plugin-html-inject',
+        'vite-plugin-full-reload',
+        'postcss-sort-media-queries',
+      ],
+    },
     plugins: [
       injectHTML(),
       FullReload(['./src/**/**.html']),
